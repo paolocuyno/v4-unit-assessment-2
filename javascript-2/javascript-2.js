@@ -36,6 +36,7 @@ let foods = [
 */
 
 //CODE HERE
+// foods.forEach(element=>element.calories=((food.carbs*4)+(food.protein*4)+(food.fat*9)){}
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -81,6 +82,9 @@ const products = [
 */
 
 //CODE HERE
+let saleProducts=products.map(elem => elem)
+
+
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -91,7 +95,7 @@ const products = [
 */
 
 //CODE HERE
-
+let blueProducts={}
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
@@ -100,7 +104,7 @@ const products = [
 */
 
 //CODE HERE
-
+let orderTotal={}
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
   For these problems we will be using the objects below, contactInfo and shippingInfo,
@@ -130,6 +134,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let helensInfo=Object.assign(contactInfo,shippingInfo)
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -139,6 +144,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let ellensInfo={...helensInfo,name:'Ellen',email:'ellen@email.com'}
 
 ////////////////////PROBLEM 7////////////////////
 /* 
@@ -146,13 +152,14 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+let email=ellensInfo.email
 ////////////////////PROBLEM 8////////////////////
 /*
   In a single expression (one line), save the zip code and state 
   from shippingInfo to new variables using destructuring.
 */
-
+let zipCode=shippingInfo.zipCode
+let state=shippingInfo.state
 //CODE HERE
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
@@ -216,7 +223,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let shouldAlert=userInfo.settings.alerts
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -224,7 +231,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let topic=userInfo.topics[3]
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -232,7 +239,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let commenterId=userInfo.comments[1].responses[0].userId
 ////////////////////PROBLEM 12////////////////////
 /*
   Create an object called 'person' that has the following properties. 
@@ -251,6 +258,22 @@ const userInfo = {
 */
 
 //CODE HERE
+let person={
+  name:'Paul',
+  age:29,
+  jobs:['eat','sleep','work'],
+  birthday: function(){
+    this.age+=1},
+  favorites:{
+    color:'red',
+    number:12,
+    book:'Harry Potter'
+  },
+  kids: [{name:'John',age:1},{name:'Jack',age:2}]
+  
+  
+  }
+  
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -276,7 +299,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -288,7 +311,7 @@ function myFunc() {
   return this
 }
 
-//let context2 = myFunc
-// let context2 = window
-//let context2 = global
+// let context2 = myFunc
+let context2 = window
+// let context2 = global
 //let context2 = workout
