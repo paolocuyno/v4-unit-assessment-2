@@ -36,7 +36,8 @@ let foods = [
 */
 
 //CODE HERE
-// foods.forEach(element=>element.calories=((food.carbs*4)+(food.protein*4)+(food.fat*9)){}
+// foods.forEach(element=>element.calories=((food.carbs*4)+(food.protein*4)+(food.fat*9)){
+  foods.push
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -82,7 +83,16 @@ const products = [
 */
 
 //CODE HERE
-let saleProducts=products.map(elem => elem)
+let saleProducts=products.map ((elem) => {
+  var newElem = {
+    name: elem.name,
+    color: elem.color,
+    price: elem.price * 0.75,
+  }
+  return newElem;
+})
+ 
+
 
 
 
@@ -152,7 +162,7 @@ let ellensInfo={...helensInfo,name:'Ellen',email:'ellen@email.com'}
 */
 
 //CODE HERE
-let email=ellensInfo.email
+let email=ellensInfo.email 
 ////////////////////PROBLEM 8////////////////////
 /*
   In a single expression (one line), save the zip code and state 

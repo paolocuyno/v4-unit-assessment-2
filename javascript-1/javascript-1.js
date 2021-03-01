@@ -78,7 +78,7 @@ const compareNums=(num1,num2)=>{
 */
 
 //CODE HERE
-const bestMovie=(movie)=>`${movie} is the best movie ever`
+const bestMovie=(movie)=>`${movie} is the best movie ever!`
      
 console.log(bestMovie('Sharknado'))
 ////////////////////PROBLEM 6////////////////////
@@ -131,8 +131,8 @@ const jsNinja=()=>'I am a JavaScript ninja!'
 
 //CODE HERE
 for (let key in shapes){
-    if(shapes.key%=2!=0){
-        delete shapes.key
+    if(shapes[key]%2!=0){
+        delete shapes[key]
     }
 }
   
@@ -176,13 +176,15 @@ const classes = [
 */
 
 //CODE HERE
-// for (i=0;i<classes.length;i++){
-//     for (let key in classes){
-//         if(classes.key=true){
-//             classes.key.assign=false
-//         }
-//     }
-// }
+for (let i=0;i <classes.length;i++){
+    for (let key in classes){
+    if (classes[i].inPerson== true){
+      classes[i].inPerson=false
+      }
+    else if(classes[i].homework== true){
+      classes[i].homework=false
+    }
+     }}
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -241,8 +243,8 @@ let fido=new Dog('Fido',3,'Jack Russell',['sit','shake'])
 */
 
 //CODE HERE
-function bark(){
-    return this.name + 'says bark!'
+function bark(name){
+    return this.name +' '+ 'says bark!'
 
 }
 
@@ -265,6 +267,7 @@ let fidoSpeak=bark.call(fido)
 //CODE HERE
 function teachTrick(trick){
     trickArr.push
+    return trickArr
 }
 
 /*
@@ -273,7 +276,7 @@ function teachTrick(trick){
 */
 
 //CODE HERE
- let teachStay= teachTrick.bind(fido)
+ let teachStay= teachTrick.bind(fido['stay'])
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -284,8 +287,8 @@ function teachTrick(trick){
 */
 
 //CODE HERE
-function dogInto(treat,toy){
-    return this.name+ 'is a' + this.breed +'that loves'+this.treat +'and their'+this.toy 
+function dogIntro(treat,toy){
+    return this.name+' '+ 'is a' + this.breed +'that loves'+this.treat +'and their'+this.toy 
 }
 
 /*
@@ -295,7 +298,7 @@ function dogInto(treat,toy){
 */
 
 //CODE HERE
-  
+let fidoIntro=dogIntro.apply()
 
 ////////////////////PROBLEM 15////////////////////
 /*
